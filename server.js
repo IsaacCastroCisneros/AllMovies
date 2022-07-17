@@ -6,7 +6,7 @@ import mongoose from "mongoose";
 import { indexRouter } from "./routes/index.js";
 import { directorsRouter } from "./routes/directors.js"; */
 
-/* import 'dotenv/config' */
+import dotenv from 'dotenv/config';
 /* if(process.env.NODE_ENV !== 'production')
 {
    dotenv.config();
