@@ -1,16 +1,15 @@
 import express from "express";
 import expressLayouts from "express-ejs-layouts";
 import mongoose from "mongoose";
-import * as dotenv from "dotenv";
 
 import { indexRouter } from "./routes/index.js";
 import { directorsRouter } from "./routes/directors.js";
 
-
-/* if(process.env.NODE_ENV !== 'production')
-{ */
+import * as dotenv from "dotenv";
+if(process.env.NODE_ENV !== 'production')
+{
     dotenv.config();
-/* } */
+}
 
 const app = express();
 
