@@ -1,9 +1,9 @@
-const express = require('express');
-const router = express.Router();
+import express from "express";
+const indexRouter = express.Router();
 
-router.get('/',(req,res)=>
+indexRouter.get('/',(req,res)=>
 {
     res.render('index')
 }) 
 
-module.exports = router;
+export {indexRouter}
