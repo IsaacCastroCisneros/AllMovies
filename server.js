@@ -6,11 +6,11 @@ import mongoose from "mongoose";
 import { indexRouter } from "./routes/index.js";
 import { directorsRouter } from "./routes/directors.js"; */
 
-import * as dotenv from 'dotenv';
-if(process.env.NODE_ENV !== 'production')
+import 'dotenv/config'
+/* if(process.env.NODE_ENV !== 'production')
 {
    dotenv.config();
-}
+} */
 
 const app = express();
 
