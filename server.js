@@ -1,15 +1,17 @@
-import express from "express";
+/* import express from "express";
 import expressLayouts from "express-ejs-layouts";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
 import { indexRouter } from "./routes/index.js";
-import { directorsRouter } from "./routes/directors.js";
-
+import { directorsRouter } from "./routes/directors.js"; */
+const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
+const mongoose =  require('mongoose');
 
 if(process.env.NODE_ENV !== 'production')
 {
-    dotenv.config();
+    require('dotenv').config();
 }
 
 const app = express();
@@ -29,6 +31,6 @@ const db = mongoose.connection;
 db.on('error',error=>console.log('mongodb | an error occurred' + error));
 db.once('open',()=> console.log('mongodb | succesfully connected'));
 
-app.use('/',indexRouter);
-app.use('/directors',directorsRouter);
+/* app.use('/',indexRouter);
+app.use('/directors',directorsRouter); */
 
